@@ -1,6 +1,7 @@
 package school
 
 import (
+	"strings"
 	"week3/applicants"
 	"week3/nonacademicstaffs"
 	"week3/principal"
@@ -16,6 +17,10 @@ type School struct {
 	Teachers         teachers.Teachers
 	NonAcademicStaff nonacademicstaffs.NoneAcademicStaff
 	Applicants       applicants.Applicants
+}
+
+var ChuksSchool = School{
+	PrincipalInstance, StudentInstance, StaffInstance, TeacherInstance, NoneAcaademicStaffInstance, Applicantsinstance,
 }
 
 var SchoolInstance = School{
@@ -75,5 +80,19 @@ var NoneAcaademicStaffInstance = nonacademicstaffs.NoneAcademicStaff{
 //func (z *School) CheckStudent() string {
 //	result := ""
 //	//if PrincipalInstance.Admits() ==
+
 //	return result
 //}
+
+var email string = "sochokwus@gmail.com"
+var specialChar string = "#()&*!~"
+
+func testEmail(email string) bool {
+	if strings.Contains(email, "@") {
+		return true
+	}
+	if strings.Contains(email, specialChar) {
+		return false
+	}
+	return false
+}

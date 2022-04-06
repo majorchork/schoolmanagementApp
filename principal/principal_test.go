@@ -11,7 +11,7 @@ func TestPrincipal_Admits(t *testing.T) {
 		output string
 	}{
 		{Principal{"Bob", 34, []string{"Bob", "Tom", "Ross"}}, 15, "Oreva", "Congratulations You have Gained Admission"},
-		{Principal{"Bob", 34, []string{"ROB", "Jim", "rose"}}, 9, "Debs", "Not Admitted, Applicant is too Young for JSS1"},
+		{Principal{"Bob", 34, []string{"ROB", "Jim", "rose"}}, 10, "Debs", "Not Admitted, Applicant is too Young for JSS1"},
 	}
 	for _, value := range Testadmits {
 		got := value.input.Admits(value.input1, value.input2)

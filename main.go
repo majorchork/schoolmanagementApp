@@ -7,4 +7,5 @@ import (
 
 func main() {
 	fmt.Println(school.SchoolInstance)
+	fmt.Println(school.ChuksSchool)
 }
